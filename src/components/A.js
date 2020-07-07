@@ -1,6 +1,7 @@
-import React, { PureComponent } from "react";
+import React, { Component, Fragment } from "react";
+import B from "./B";
 
-class A extends PureComponent {
+class A extends Component {
   constructor(props) {
     /* 
         A special function that will get called whenever a new component is being created.
@@ -33,6 +34,7 @@ class A extends PureComponent {
         can't use setState so instead you return a new object representing the new state
         DO NOT CAUSE SIDEEFFECTS HERE! (like HTTP requests)
     */
+    return null;
   }
 
   render() {
@@ -43,7 +45,12 @@ class A extends PureComponent {
         Children components lifecycle methods are also being executed
         DO NOT CHANGE STATE OR INTERACT WITH DOM OR MAKE AJAX CALLS
     */
-    return <h2>Hi Im Lifecycle A!</h2>;
+    return (
+      <Fragment>
+        <h2>Hi Im Lifecycle A!</h2>
+        <B />
+      </Fragment>
+    );
   }
 }
 
