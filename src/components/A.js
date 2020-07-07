@@ -76,6 +76,7 @@ class A extends Component {
         Called after the render is finished in the re-render cycles
         Cause side-effects
         Compare the previous props and previous state and then decide if cause side-effects
+        componentDidUpdate() will not be invoked if shouldComponentUpdate() returns false.
     */
   }
 
