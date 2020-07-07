@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class B extends Component {
   constructor(props) {
     /* 
+        MOUNTING:
         A special function that will get called whenever a new component is being created.
         Initializing state
         Binding the event handlers
@@ -18,6 +19,7 @@ class B extends Component {
 
   componentDidMount() {
     /*
+        MOUNTING:
         Called only once in the whole life cycle of a component.
         Invoked immediately after a component and all its children components have been rendered to the DOM
         Perfect place to cause side-effects: Iteract with the DOM or perform any ajax calls to load data.
@@ -27,6 +29,7 @@ class B extends Component {
 
   static getDerivedStateFromProps(props, state) {
     /*
+        MOUNTING:
         When the state of the component depends on changes in props over time.
         Set the state
         does not have access to the 'this' keyword
@@ -38,6 +41,7 @@ class B extends Component {
 
   render() {
     /*
+        MOUNTING:
         The only required method.
         Read props & state and returns JSX
         A pure function, should always render the same UI
